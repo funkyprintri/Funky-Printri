@@ -6,7 +6,8 @@
     <title>Funky Printri - Product Catalog</title>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <style>
-        body {
+        /* Base Styles (for PC and larger devices) */
+body {
     font-family: Arial, sans-serif;
     background-color: #f3e5d4;
     color: #4d3319;
@@ -28,7 +29,7 @@ header img {
 
 header h1 {
     font-family: 'Great Vibes', cursive;
-    font-size: 3vw;
+    font-size: 3vw; /* responsive font size for larger screens */
     color: #6a4e23;
     margin: 0;
 }
@@ -62,10 +63,10 @@ nav a:hover {
 }
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default grid with 3 columns for large screens */
     gap: 20px;
-    justify-content: center;
+    justify-items: center;
     padding: 20px;
     margin: 0 auto;
     max-width: 1200px;
@@ -105,10 +106,10 @@ footer a:hover {
     color: #dab38e;
 }
 
-/* For small screens */
+/* Mobile and Tablet Adjustments */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* Slightly smaller font size for mobile/tablet */
     }
 
     nav {
@@ -117,22 +118,23 @@ footer a:hover {
     }
 
     nav a {
-        margin: 10px 0;
+        margin: 10px 0; /* Add vertical margin for better spacing */
     }
 
+    /* Adjust the gallery for smaller screens */
     .gallery {
-        flex-direction: column;  /* Stack gallery items vertically */
+        grid-template-columns: 1fr 1fr;  /* Use 2 columns on smaller screens */
     }
 
     footer {
-        font-size: 0.9rem;
+        font-size: 0.9rem; /* Smaller footer text on mobile */
     }
 }
 
-/* For extra small screens */
+/* Extra Small Mobile Adjustments */
 @media (max-width: 480px) {
     header h1 {
-        font-size: 1.8rem;
+        font-size: 1.8rem; /* Even smaller font size for extra small screens */
     }
 
     nav {
@@ -140,97 +142,13 @@ footer a:hover {
     }
 
     .gallery {
-        grid-template-columns: 1fr;  /* Single column for gallery */
-        padding: 15px;
+        grid-template-columns: 1fr;  /* Stack gallery items in a single column */
+        padding: 10px;
     }
 
     footer {
         font-size: 0.8rem;
         padding: 10px;
-    }
-}
-
-}
-
-/* For small screens */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5rem;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a {
-        margin: 10px 0;
-    }
-
-    .gallery {
-        flex-direction: column;  /* Stack gallery items vertically */
-    }
-
-    footer {
-        font-size: 0.9rem;
-    }
-}
-
-/* For extra small screens */
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    nav {
-        padding: 10px;
-    }
-
-    .gallery {
-        grid-template-columns: 1fr;  /* Single column for gallery */
-        padding: 15px;
-    }
-
-    footer {
-        font-size: 0.8rem;
-        padding: 10px;
-    }
-}
-
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    nav {
-        flex-direction: column;
-    }
-
-    nav a {
-        margin: 10px 0;
-    }
-
-    .gallery {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-
-    footer {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5rem;
-    }
-
-    nav {
-        padding: 10px;
-    }
-
-    .gallery {
-        grid-template-columns: 1fr;
     }
 }
 
