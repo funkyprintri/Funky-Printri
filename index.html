@@ -150,6 +150,53 @@ footer a:hover {
     }
 }
 
+}
+
+/* For small screens */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    .gallery {
+        flex-direction: column;  /* Stack gallery items vertically */
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+/* For extra small screens */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav {
+        padding: 10px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;  /* Single column for gallery */
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+}
+
 /* Media Queries for responsiveness */
 @media (max-width: 768px) {
     header h1 {
