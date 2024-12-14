@@ -6,7 +6,7 @@
     <title>Funky Printri - Product Catalog</title>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <style>
-       /* Base Styles (for PC and larger devices) */
+     /* Base Styles (for PC and larger devices) */
 body {
     font-family: Arial, sans-serif;
     background-color: #f3e5d4;
@@ -20,8 +20,8 @@ header {
     background-color: #dab38e;
     padding: 30px 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Make sure the header stretches across the screen */
-    margin: 0;   /* Ensure no margins on the sides */
+    width: 100%;
+    margin: 0;   /* Remove margin */
 }
 
 header img {
@@ -47,9 +47,10 @@ nav {
     align-items: center;
     background-color: #b8866b;
     padding: 15px;
-    width: 100%; /* Ensure nav stretches across the screen */
-    margin: 0;   /* Ensure no margins on the sides */
+    width: 100vw; /* Stretch to the full width of the viewport */
+    margin: 0;
     box-sizing: border-box; /* Ensure padding doesn’t cause overflow */
+    overflow: hidden; /* Prevent any overflow */
 }
 
 nav a {
@@ -69,7 +70,7 @@ nav a:hover {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Keep this layout for PC */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
     margin: 0 auto;
@@ -97,9 +98,10 @@ footer {
     font-size: 1rem;
     position: relative;
     bottom: 0;
-    width: 100%; /* Ensure footer stretches across the screen */
-    margin: 0; /* Ensure no margins on the sides */
+    width: 100vw; /* Stretch to the full width of the viewport */
+    margin: 0;
     box-sizing: border-box; /* Ensure padding doesn’t cause overflow */
+    overflow: hidden; /* Prevent any overflow */
 }
 
 footer a {
@@ -115,30 +117,30 @@ footer a:hover {
 /* Mobile and Tablet Adjustments */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2rem; /* Smaller font size for mobile/tablet */
+        font-size: 2rem;
     }
 
     nav {
-        flex-direction: column; /* Stack navigation links for smaller screens */
+        flex-direction: column; /* Stack navigation links */
     }
 
     nav a {
-        margin: 10px 0; /* Add vertical margin for better spacing */
+        margin: 10px 0;
     }
 
     .gallery {
-        grid-template-columns: 1fr 1fr;  /* Use 2 columns on smaller screens */
+        grid-template-columns: 1fr 1fr;
     }
 
     footer {
-        font-size: 0.9rem; /* Smaller footer text on mobile */
+        font-size: 0.9rem;
     }
 }
 
 /* Extra Small Mobile Adjustments */
 @media (max-width: 480px) {
     header h1 {
-        font-size: 1.8rem; /* Even smaller font size for extra small screens */
+        font-size: 1.8rem;
     }
 
     nav {
@@ -146,7 +148,7 @@ footer a:hover {
     }
 
     .gallery {
-        grid-template-columns: 1fr;  /* Stack gallery items in a single column */
+        grid-template-columns: 1fr;
         padding: 10px;
     }
 
@@ -155,8 +157,6 @@ footer a:hover {
         padding: 10px;
     }
 }
-
-
 
     </style>
     <script>
