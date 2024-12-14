@@ -117,12 +117,18 @@ footer a:hover {
 
 /* Mobile and Tablet Adjustments */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
+    body {
+        padding-right: 0; /* Remove any right padding */
+    }
+
+    header {
+        padding: 30px 10px;
+        width: 100%; /* Ensure full width */
     }
 
     nav {
         flex-direction: column; /* Stack navigation links */
+        width: 100%; /* Full width */
     }
 
     nav a {
@@ -135,17 +141,25 @@ footer a:hover {
 
     footer {
         font-size: 0.9rem;
+        padding: 10px;
+        width: 100%; /* Full width */
     }
 }
 
 /* Extra Small Mobile Adjustments */
 @media (max-width: 480px) {
-    header h1 {
-        font-size: 1.8rem;
+    body {
+        padding-right: 0; /* Ensure no right padding */
+    }
+
+    header {
+        padding: 30px 5px;
+        width: 100%; /* Full width */
     }
 
     nav {
         padding: 10px;
+        width: 100%; /* Full width */
     }
 
     .gallery {
@@ -156,8 +170,10 @@ footer a:hover {
     footer {
         font-size: 0.8rem;
         padding: 10px;
+        width: 100%; /* Full width */
     }
 }
+
 
     </style>
     <script>
