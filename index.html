@@ -6,7 +6,7 @@
     <title>Funky Printri - Product Catalog</title>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <style>
-        /* Base Styles (for PC and larger devices) */
+       /* Base Styles (for PC and larger devices) */
 body {
     font-family: Arial, sans-serif;
     background-color: #f3e5d4;
@@ -49,6 +49,7 @@ nav {
     padding: 15px;
     width: 100%; /* Ensure nav stretches across the screen */
     margin: 0;   /* Ensure no margins on the sides */
+    box-sizing: border-box; /* Ensure padding doesn’t cause overflow */
 }
 
 nav a {
@@ -97,6 +98,8 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%; /* Ensure footer stretches across the screen */
+    margin: 0; /* Ensure no margins on the sides */
+    box-sizing: border-box; /* Ensure padding doesn’t cause overflow */
 }
 
 footer a {
@@ -152,6 +155,7 @@ footer a:hover {
         padding: 10px;
     }
 }
+
 
 
     </style>
