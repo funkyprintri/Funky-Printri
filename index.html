@@ -62,20 +62,22 @@ nav a:hover {
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
     padding: 20px;
     margin: 0 auto;
     max-width: 1200px;
 }
 
 .gallery img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     border: 2px solid #b8866b;
     border-radius: 10px;
     transition: transform 0.3s ease;
+    object-fit: cover;
 }
 
 .gallery img:hover {
@@ -84,7 +86,7 @@ nav a:hover {
 
 footer {
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     background-color: #b8866b;
     color: white;
     font-size: 1rem;
@@ -101,6 +103,51 @@ footer a {
 
 footer a:hover {
     color: #dab38e;
+}
+
+/* For small screens */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    .gallery {
+        flex-direction: column;  /* Stack gallery items vertically */
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+/* For extra small screens */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav {
+        padding: 10px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;  /* Single column for gallery */
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
 }
 
 /* Media Queries for responsiveness */
